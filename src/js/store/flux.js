@@ -14,13 +14,23 @@ const getState = ({ getStore, getActions, setStore }) => {
         },
       ],
 
+      
+        //! aqui es donde se almacena la info
 	  personajes:[
 		
 	  ],
     planetas:[
 
-    ]
+    ],
+    vehiculos:[
+
+    ],
+
     },
+
+
+
+
     actions: {
       // Use getActions to call a function within a fuction
       exampleFunction: () => {
@@ -49,6 +59,15 @@ const getState = ({ getStore, getActions, setStore }) => {
         .then(res => res.json())
         .then(data => setStore({planetas:data.results}))
         .catch(err => console.error(err));
+      },
+
+      //! aqui hacemos la llamda a la API para los vehivulos
+      
+      obtenerVehiculos:()=>{
+        fetch("https://www.swapi.tech/api/vehicles/")
+        .then(res => res.json())
+        .then(data => setStore({vehiculos:data.results}))
+        .catch(err => console.error(err))
       },
 
 
