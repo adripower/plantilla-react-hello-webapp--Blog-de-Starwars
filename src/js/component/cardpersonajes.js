@@ -1,6 +1,8 @@
 import React,{useContext, useEffect,useState} from "react";
 import { Context } from "../store/appContext";
 
+
+
 export const Cardpersonajes =({personaje})=>{
     const{store,action}=useContext(Context)
     const[detalle,setDetalle]=useState({})

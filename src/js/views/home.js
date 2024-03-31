@@ -2,6 +2,7 @@ import React, {useContext} from "react";
 import { Context } from "../store/appContext";
 import "../../styles/home.css";
 import { Cardpersonajes } from "../component/cardpersonajes";
+import { Cardplanetas } from "../component/Cardplanetas";
 
 export const Home = () => {
 	const {store,actions} =useContext(Context)
@@ -19,6 +20,18 @@ export const Home = () => {
 						})
 					}
 				</div>
+
+				<h2>Planetas</h2>
+				<div style={{display:"flex",overflowX:"scroll" }}> 
+					{
+						store.planetas.map((planeta)=>{
+							return(
+								<Cardplanetas planeta={planeta} key={planeta.uid}/>
+							)
+						})
+					}
+				</div>
+
 			</div>
 		</div>
 	)

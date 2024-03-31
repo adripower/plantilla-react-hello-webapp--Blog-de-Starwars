@@ -20,7 +20,7 @@ const injectContext = PassedComponent => {
 					})
 			})
 		);
-
+				//! aqui hacemos la garga de la API al renderizar la pagina
 		useEffect(() => {
 			/**
 			 * EDIT THIS!
@@ -32,6 +32,7 @@ const injectContext = PassedComponent => {
 			 *
 			 **/
 			state.actions.obtenerPersonajes()
+			state.actions.obtenerPlanetas()
 
 
 		}, []);
