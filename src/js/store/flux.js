@@ -75,8 +75,16 @@ const getState = ({ getStore, getActions, setStore }) => {
       },
 
 
-      //! aqui esta lo de agregar a favoritos
+      //! aqui esta lo de agregar a favoritos   por ahora no a explotado
         addFavoritos:(item)=>{
+          const store = getStore()
+				
+				  const addFavoritos = store.favoritos.includes(item);
+
+  				  if (addFavoritos) {
+				    const ponerFavoritos = [...store.favoritos, item];
+				    setStore({ favoritos: ponerFavoritos})
+				  }
 
 
 
