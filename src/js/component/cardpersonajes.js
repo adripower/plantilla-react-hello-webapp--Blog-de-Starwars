@@ -11,8 +11,10 @@ export const Cardpersonajes =({personaje})=>{
     },[])
     return(
         <div className="col-12 col-md-4 col-lg-3" key={personaje.uid}>
-									{personaje.name}
-								</div>
+			{personaje.name}
+            <p>holi</p>
+            <button className="btn btn-outline-dark "  ><i className="fas fa-heart"></i></button>
+		</div>
 
     )
 
