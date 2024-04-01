@@ -25,6 +25,10 @@ const getState = ({ getStore, getActions, setStore }) => {
     vehiculos:[
 
     ],
+    
+    favoritos:[
+
+    ],
 
     },
 
@@ -70,6 +74,15 @@ const getState = ({ getStore, getActions, setStore }) => {
         .catch(err => console.error(err))
       },
 
+
+      //! aqui esta lo de agregar a favoritos
+        addFavoritos:(item)=>{
+
+
+
+          
+        },
+     
 
 
 
