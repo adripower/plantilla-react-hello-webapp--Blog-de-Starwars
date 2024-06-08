@@ -18,20 +18,6 @@ export const Navbar = () => {
 
 	let token = localStorage.getItem("token")
 
-	console.log(store.favorites);
-
-	// const params = useParams()
-	// console.log(params);
-
-	// const type = params.type === "people" ? "characters" || "characters_name" :
-	//                  params.type === "planets" ? "planets" || "planets_name":
-	//                  params.type === "vehicles" ? "vehicles" || "vehicles_name": "";
-
-
-	// useEffect(() => {
-	//     actions.getInfo(params.type, params.uid)
-	// }, [])
-
 	function removeFavorite(indexType, id) {
 		let type;
 		if (indexType === 0) {
@@ -44,7 +30,6 @@ export const Navbar = () => {
 		actions.removeFav(type, id);
 	};
 
-	console.log(store.info);
 
 	return (
 		<nav className="navbar navbar-light bg-light mb-3 py-4">
@@ -61,7 +46,7 @@ export const Navbar = () => {
 							{store.favorites.length === 0 ?
 								<li className="text-center">(empty)</li>
 								: store.favorites.map((elem, indexType) => {
-									console.log(elem);
+									
 									return (
 										elem.map((item, index) => {
 											console.log(item);
@@ -78,10 +63,10 @@ export const Navbar = () => {
 								})}
 
 						</ul>
-						<button type="button" className="btn btn-success ms-2 rounded" onClick={logout}>Logout</button>
+						<button type="button" className=" btn-success ms-2 rounded" onClick={logout}>Logout</button>
 					</div>
 					: <Link to="/login">
-						<button type="button" className="btn btn-success">Login</button>
+						<button type="button" className=" btn-success">Login</button>
 					</Link>}
 			</div>
 		</nav>

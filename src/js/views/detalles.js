@@ -1,18 +1,13 @@
 import React, { useEffect, useState, useContext } from "react";
 import { Context } from "../store/appContext.js";
 import { useParams } from "react-router";
-import "../../styles/detalles.css";
-import { Link } from "react-router-dom";
-
+import "../../styles/index.css";
 
 
 export const Detalles = () => {
 
     const params = useParams()
-    console.log(params);
-
     const { store, actions } = useContext(Context)
-
     const type = params.type === "people" ? "characters" :
                      params.type === "planets" ? "planets" :
                      params.type === "vehicles" ? "vehicles" : "";
@@ -21,10 +16,6 @@ export const Detalles = () => {
     useEffect(() => {
         actions.getInfo(params.type, params.uid)
     }, [])
-
-    console.log(store.info);
-
-    // const info = store.properties
 
     return (
         <>
@@ -91,10 +82,6 @@ export const Detalles = () => {
                     </div>
                 </div>
             </div>
-            {/* <div className="detalles container d-flex justify-content-center">
-        <img src="https://productroulette.com/_nuxt/img/blog1.d1e9eb0.jpg" className="img-left" alt="..."/>
-        <h1 className="tittle">Nombre Personaje</h1>
-        </div> */}
         </>
     )
 

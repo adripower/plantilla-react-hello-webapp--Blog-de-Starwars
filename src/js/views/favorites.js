@@ -3,7 +3,7 @@ import { Context } from "../store/appContext";
 import { CardPeople } from "../component/cardpeople.jsx";
 import { CardPlanets } from "../component/cardplanets.jsx";
 import { CardVehicles } from "../component/cardvehicles.jsx";
-import "../../styles/favorites.css";
+
 
 
 export const Favorites = () => {
