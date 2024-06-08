@@ -1,0 +1,17 @@
+.img-left {
+    width: 500px;
+    height: 425px;
+    /* padding-bottom: 40px;
+    padding-right: 50px; */
+    margin-left: 0px;
+}
+.tittle-bottom {
+    border-top: 1px solid red;
+    margin-left: 60px;
+    margin-right: 60px;
+    margin-top: 20px;
+}
+.jumbotron {
+    margin-left: 100px;
+    margin-right: 100px;
+}
